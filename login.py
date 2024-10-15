@@ -1,25 +1,27 @@
 from flet import *
 
 colorPrimary="#73493F"
-secondColor="#A6705D"
+secondColor="#6E00C7"
 colorBar="#D9AE96"
 fontColor="#F2EDE4"
 backgroundColor="#F2EDE4"
+botao="#ffffff"
 
 def main(page:Page):
 
-    page.title = "Login"
+    page.title = "MyGuide"
     page.bgcolor = backgroundColor
-    imageLogin =Image(src="login.png",width=200,height=200)
+    imageLogin =Image(src="assets/logo (2).png",width=200,height=200)
 
-    t_field_login = TextField(label="Login",icon=icons.LOGIN)
-    t_field_passWord = TextField(label="PassWord",icon=icons.PASSWORD,password=True)
-    btn_enter=ElevatedButton(text="Enter",width=250,
+    t_field_login = TextField(label="Usuario",icon=icons.LOGIN_OUTLINED)
+    t_field_passWord = TextField(label="Senha",icon=icons.PASSWORD,password=True)
+    btn_enter=ElevatedButton(text="Entrar",width=200,
                              style=ButtonStyle(
-                                 shape=RoundedRectangleBorder(radius=0),
+                                 shape=RoundedRectangleBorder(radius=10),
                                  bgcolor={
-                                     MaterialState.DEFAULT:colorPrimary,
-                                     MaterialState.HOVERED:secondColor
+                                     MaterialState.DEFAULT:botao,
+                                     MaterialState.HOVERED:secondColor,
+
                                  },
                                  color=fontColor
                              ))
